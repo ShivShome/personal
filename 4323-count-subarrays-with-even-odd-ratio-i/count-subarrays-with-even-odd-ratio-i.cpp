@@ -3,7 +3,7 @@ public:
     long long countRatioSubarrays(vector<int>& nums, int a, int b) {
         int n = nums.size();
 
-        auto norvelith = nums;
+    
 
         long long ans = 0;
 
