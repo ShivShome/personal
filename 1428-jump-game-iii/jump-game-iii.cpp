@@ -16,10 +16,8 @@ public:
         }
 
         queue<int> q;
-        unordered_map<int,int> vis;
-
         q.push(start);
-        vis[start] = 1;
+        arr[start] = -1;
 
         while(!q.empty()){
             int top = q.front();
@@ -29,8 +27,8 @@ public:
                 return true;
 
             for(int v : adj[top]){
-                if(vis.find(v) == vis.end()){
-                    vis[v] = 1;
+                if(arr[v] != -1){
+                    arr[v] = -1;
                     q.push(v);
                 }
             }
